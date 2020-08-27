@@ -6,7 +6,7 @@
  * Version: 1.0.0
  * Author: Editor Enhancer
  * Author URI: https://editorenhancer.com
- * Text Domain: editor_enhancer
+ * Text Domain: ee_grid_controls
  */
 
 defined( 'ABSPATH' ) || exit;

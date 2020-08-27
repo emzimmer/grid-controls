@@ -3,7 +3,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Init Editor Enhancer.
+ * Init Grid Controls
  */
 add_action( 'plugins_loaded', 'ee_grid_controls_init' );
 function ee_grid_controls_init() {
