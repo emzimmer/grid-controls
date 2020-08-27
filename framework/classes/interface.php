@@ -21,7 +21,7 @@ class EEGridControls_Interface extends EEGridControls_Config {
 			if ( class_exists( 'CT_Component' ) ) :
 
 				add_action( 'ct_toolbar_advanced_settings', [ $this, 'enqueue_advanced_tabs' ], 11 );
-				add_action( 'ct_toolbar_advanced_settings', [ $this, 'add_grid_styles'] );
+				$this->_add_grid_styles();
 
 			else :
 				echo '<script>console.log("CT_Component class is not available.");</script>';
@@ -177,7 +177,17 @@ class EEGridControls_Interface extends EEGridControls_Config {
 		 */
 		?>
 		<div class="oxygen-sidebar-advanced-subtab"
-			ng-show="showAllStyles && isActiveName('ct_div_block');"
+			ng-show="showAllStyles
+					&& (isActiveName('ct_div_block')
+						|| isActiveName('ct_headline')
+						|| isActiveName('ct_text_block')
+						|| isActiveName('oxy_rich_text')
+						|| isActiveName('ct_link_text')
+						|| isActiveName('ct_link')
+						|| isActiveName('ct_link_button')
+						|| isActiveName('ct_image')
+						|| isActiveName('ct_video')
+					);"
 			ng-click="switchTab('advanced', 'ee-grid-child')">
 			<img src="<?php echo CT_FW_URI; ?>/toolbar/UI/oxygen-icons/advanced/layout.svg" title="EE Grid" alt="EE Grid" />
 			<span>Grid Child Controls</span>
@@ -244,7 +254,7 @@ class EEGridControls_Interface extends EEGridControls_Config {
 	/**
 	 * Add grid styles
 	 */
-	public function add_grid_styles() {
+	private function _add_grid_styles() {
 
 		$grid_styles = [
 			'grid-template-columns',
