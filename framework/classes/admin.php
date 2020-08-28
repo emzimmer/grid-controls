@@ -97,15 +97,17 @@ class EEGridControls_Admin extends EEGridControls_Config {
 	 */
 	public function addBasicPages() {
 
+		add_submenu_page( 'ct_dashboard_page', 'Grid Controls', 'Grid Controls', 'manage_options', $this->homeSlug, [ $this, 'homePage' ] );
+
 		// Top level page and Home submenu
-		add_menu_page( 'Grid Controls', 'Grid Controls', 'manage_options', $this->homeSlug, [ $this, 'homePage' ] );
+		//add_menu_page( 'Grid Controls', 'Grid Controls', 'manage_options', $this->homeSlug, [ $this, 'homePage' ] );
 
 		// Homepage submenu item
-		$this->register_page(
-			'Home',
-			$this->homeSlug,
-			'homePage'
-		);
+		//$this->register_page(
+		//	'Home',
+		//	$this->homeSlug,
+		//	'homePage'
+		//);
 
 		// License submenu item
 		$this->register_page(
