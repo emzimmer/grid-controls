@@ -48,7 +48,12 @@ class EEGridControls_Interface extends EEGridControls_Config {
 		 */
 		?>
 		<div class="oxygen-sidebar-advanced-subtab"
-			ng-show="showAllStyles && isActiveName('ct_div_block');"
+			ng-show="showAllStyles
+					&& (isActiveName('ct_div_block')
+						|| isActiveName('oxy_dynamic_list')
+						|| isActiveName('ct_modal')
+						|| isActiveName('oxy_tab_content')
+					);"
 			ng-click="switchTab('advanced', 'ee-grid-parent')">
 			<img src="<?php echo CT_FW_URI; ?>/toolbar/UI/oxygen-icons/advanced/layout.svg" title="EE Grid" alt="EE Grid" />
 			<span>Grid Parent Controls</span>
