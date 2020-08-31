@@ -3,7 +3,7 @@
  * Plugin Name: GIT Grid Controls
  * Plugin URI: https://editorenhancer.com
  * Description: Add grid controls to Oxygen's Advanced styles panels.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Editor Enhancer
  * Author URI: https://editorenhancer.com
  * Text Domain: ee_grid_controls
@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * General definitions.
  */
 define( 'EEGRID',			true );
-define( 'EEGRID_VERSION',	'1.0.0' );
+define( 'EEGRID_VERSION',	'1.0.1' );
 define( 'EEGRID_INDEX',	    __FILE__ );
 define( 'EEGRID_ROOT',		plugin_dir_path( EEGRID_INDEX ) );
 define( 'EEGRID_URI',		plugin_dir_url( EEGRID_INDEX ) );
