@@ -192,6 +192,10 @@ class EEGridControls_Interface extends EEGridControls_Config {
 						|| isActiveName('ct_link_button')
 						|| isActiveName('ct_image')
 						|| isActiveName('ct_video')
+						|| isActiveName('oxy-dashboard-customizer-at-a-glance')
+						|| isActiveName('oxy-dashboard-customizer-recent-posts')
+						|| isActiveName('oxy-dashboard-customizer-future-posts')
+						|| isActiveName('oxy-dashboard-customizer-admin-link-wrapper')
 					);"
 			ng-click="switchTab('advanced', 'ee-grid-child')">
 			<img src="<?php echo CT_FW_URI; ?>/toolbar/UI/oxygen-icons/advanced/layout.svg" title="EE Grid" alt="EE Grid" />
